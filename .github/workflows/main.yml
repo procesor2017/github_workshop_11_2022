@@ -6,3 +6,14 @@ jobs:
     steps:
       - name: ahoj_svete
         run: echo Hello world
+       
+  need_job:
+    needs: ahoj_svete
+    runs-on: ubuntu-latest
+    steps:
+      - name: need_sem_tu
+        run: |
+          echo Ahoj,
+          echo ja se spustim az dobehne job ahoj svete
+    
+    
