@@ -1,1 +1,14 @@
 name: learn_github_workshop
+on: [push, workflow_dispatch]
+
+jobs:
+  postman:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v2
+      - name: Run NewMan
+        uses: anthonyvscode/newman-action@v1.1
+        with:
+          collection: ${{ github.workspace }}/test/Postman/TestApi.json
+          reporters: cli
