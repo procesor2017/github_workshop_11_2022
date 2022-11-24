@@ -23,4 +23,23 @@ jobs:
           echo Ahoj,
           echo ja se spustim az dobehne job ahoj svete
     
+  secret_var_job:
+    runs-on: ubuntu-latest
+    env:
+      PROMENA: BATMAN
+    steps:
+      - name: ukazka promene
+        run: echo $PROMENA
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
