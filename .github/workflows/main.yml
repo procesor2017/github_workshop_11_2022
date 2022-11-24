@@ -32,4 +32,4 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with: 
           filename: ${{ github.workspace }}/test/k6/loadtest.js
-          flags: --vus 50 --duration 8s
+          flags: --vus 20 --duration 8s
