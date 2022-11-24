@@ -33,6 +33,15 @@ jobs:
         run: |
           echo $PROMENA
           echo $VAR
+          
+  zavislak:
+    runs-on: ubuntu-latest
+    needs: [if_job,ahoj_svete,need_job,secret_var_job]
+    steps:
+      - name: Print array
+        run: |
+          echo Nespustim se dokud nedobehne
+          echo "${{ toJSON(needs) }}"
     
     
     
