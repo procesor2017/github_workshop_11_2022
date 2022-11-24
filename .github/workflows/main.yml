@@ -22,4 +22,14 @@ jobs:
         run: |
           docker pull reportportal/newman
           docker run -t reportportal/newman run https://raw.githubusercontent.com/procesor2017/gitHubWorkShop/master/test/Postman/TestApi.json
-    
+
+  k6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v2
+      - name: k6 load test
+        uses: grafana/k6-action@v0.2.0
+        with: 
+          filename: ${{ github.workspace }}/test/k6/loadtest.js
+          flags: --vus 50 --duration 8s
