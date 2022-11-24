@@ -1,0 +1,8 @@
+name: learn_github_workshop
+on: [push, workflow_dispatch]
+jobs: 
+  ahoj_svete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ahoj_svete
+        run: echo Hello world
