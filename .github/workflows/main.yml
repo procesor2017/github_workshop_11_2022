@@ -41,7 +41,7 @@ jobs:
       - name: Print array
         run: |
           echo Nespustim se dokud nedobehne
-          echo "${{ toJSON(needs) }}"
+          
     
     
     
